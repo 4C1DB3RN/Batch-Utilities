@@ -58,7 +58,7 @@ del /f /q Battery-Report.html
 exit
 
 :SEVEN
-if exist "%temp%\Battery-Report.html" del /f /q Battery-Report.html
+if exist "%temp%\energy-report.html" del /f /q energy-report.html
 echo Building energy report...
 powercfg /energy
 if exist "energy-report.html" start /wait energy-report.html else goto :ERROR
