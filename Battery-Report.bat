@@ -3,9 +3,7 @@
 ::and energy related information.
 ::
 ::It then automatically deletes any files it generated and exits.
-::
-::Scripted by if3xist for github & HackForums
-::Contact me @ mf666@protonmail.ch
+
 
 @echo off
 %systemdrive%
