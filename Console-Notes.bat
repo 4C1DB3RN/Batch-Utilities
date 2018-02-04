@@ -182,8 +182,6 @@ ECHO perfecting the sript which has been tested thoroughly on a WIN 7 computer.
 %n%
 ECHO Theoretically IF you use this script on any admin priv act you can quickly
 ECHO gather all the information you need about it running a few simple commands.
-%n%
-ECHO Please email me with any questions or concerns @ mf666@protonmail.ch
 %BORDER%
 %n%
 PAUSE
