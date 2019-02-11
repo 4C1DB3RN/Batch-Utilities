@@ -1,12 +1,10 @@
 ::::::::::::::::::::::::::::::::::::::::::::::::
-::  This tool was updated on 3/8/17 by mf666  ::
+::      This tool was updated on 3/8/17.      ::
 ::Read the about section for more information!::
-::                                            ::
-::       Contact: mf666@protonmail.ch         ::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 @echo off
-set TTL=title mf666's Anti-Telemetry Tool -
+set TTL=title Anti-Telemetry Tool -
 
 %TTL% LOADING...
 color 70
@@ -17,7 +15,7 @@ net start "task scheduler" > nul
 :MENU
 cls
 %TTL% Menu
-echo Welcome to mf666's Anti-Telemetry Tool! (Updated 02/06/17)
+echo Welcome to the Anti-Telemetry Tool! (Updated 02/06/17)
 echo.
 echo This tool was designed to help you fully anonymize your installation of Windows 10.
 echo.
@@ -289,13 +287,11 @@ pause
 :ABOUT
 cls
 %TTL% About...
-echo [mf666's Anti-Telemetry Tool]
+echo [The Anti-Telemetry Tool]
 echo.
 echo I created this tool as a follow-up to my Cortana Disabling Utility that I made a long time ago.
 echo This tool will help you create a safer and more private environment on your Windows 10 machine.
 echo Please feel free to modify and distribute this script as you see fit. Its yours now.
-echo.
-echo Please email me @ mf666@protonmail.ch with any suggestions/questions!
 echo.
 pause
 goto :MENU
