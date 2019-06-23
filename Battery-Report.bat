@@ -1,5 +1,5 @@
-::Detects which version of windows you are running and dynamically chooses 
-::the appropriate way to view battery/energy related information.
+::Detects the version of windows and runs the correct powercfg.
+::        Written by 4C1DB3RN
 
 @echo off
 :: Establishing Context
@@ -21,6 +21,12 @@ set PWMG=echo Running powercfg...
 :: Deleting Message Command
 set DLMG=echo Deleting temp files...
 
+:: Version Variable
+:: Must be before the Version Message Command!
+for /f "tokens=4-5 delims=. " %%i in ('ver') do set VERSION=%%i.%%j
+:: Version Message Command
+set VRMS=echo Windows version %VERSION% detected!
+
 :: Exit Message Command
 set EXMS=echo Good Bye :)
 
@@ -30,16 +36,10 @@ set BTRP=Battery-Report.html
 :: Energy Report File
 set ENRP=energy-report.html
 
+:: Direct the script to the proper functinon
+:CHECKVERSION
 %TTL% Checking Windows Version
-
-echo Checking Windows version
 setlocal
-
-:: Get Version
-for /f "tokens=4-5 delims=. " %%i in ('ver') do set VERSION=%%i.%%j
-
-:: Version Message Command
-set VRMS=echo Windows version %version% detected!
 if "%version%" == "10.0" %TTL% Windows 10  & %VRMS% & goto :8PLUS
 if "%version%" == "6.3"  %TTL% Windows 8.1 & %VRMS% & goto :8PLUS
 if "%version%" == "6.2"  %TTL% Windows 8   & %VRMS% & goto :8PLUS
@@ -49,7 +49,7 @@ endlocal
 :: Windows version isn't supported error
 :NOTSUPPORTED
 %TTL% Incompadible Windows version...
-echo. & echo This script only supports Windows version 6.1 (7) - 10.0...
+echo. & echo This script only supports Windows version 7 - 10!
 echo Your version is:
 ver
 pause
@@ -60,7 +60,7 @@ exit
 :: General Error
 :ERROR
 %TTL% He's dead Jim...
-echo. & echo ====SOMETHING SEEMS TO HAVE GONE WRONG!====
+echo. & echo = = = = SOMETHING SEEMS TO HAVE GONE WRONG! = = = =
 echo Try running this script as an administrator!
 pause
 %EXMS%
