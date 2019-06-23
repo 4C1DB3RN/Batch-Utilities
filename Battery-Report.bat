@@ -4,7 +4,6 @@
 ::
 ::It then automatically deletes any files it generated and exits.
 
-
 @echo off
 %systemdrive%
 cd %temp%
@@ -22,22 +21,20 @@ if "%version%" == "6.2" %TTL% Windows 8 & %VRMS% & goto :8PLUS
 if "%version%" == "6.1" %TTL% Windows 7 & %VRMS% & goto :SEVEN
 endlocal
 
-goto :ERROR1
-
-:ERROR
-%TTL% He's dead Jim...
-echo. & echo ====SOMETHING SEEMS TO HAVE GONE WRONG!====
-echo Try running this script as an administrator!
+:NOTSUPPORTED
+%TTL% Incompadible Windows version...
+echo. & echo This script only supports Windows version 6.1 (7) - 10.0...
+echo Your version is:
+ver
 pause
 %EXMS%
 ping localhost > nul
 exit
 
-:ERROR1
-%TTL% Incompadible Windows version...
-echo. & echo This script only supports Windows version 6.1 (7) - 10.0...
-echo Your version is:
-ver
+:ERROR
+%TTL% He's dead Jim...
+echo. & echo ====SOMETHING SEEMS TO HAVE GONE WRONG!====
+echo Try running this script as an administrator!
 pause
 %EXMS%
 ping localhost > nul
