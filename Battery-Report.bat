@@ -1,6 +1,3 @@
-::Detects the version of windows and runs the correct powercfg.
-::        Written by 4C1DB3RN
-
 @echo off
 :: Establishing Context
 %systemdrive%
