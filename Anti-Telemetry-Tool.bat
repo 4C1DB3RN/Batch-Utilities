@@ -1,8 +1,3 @@
-::::::::::::::::::::::::::::::::::::::::::::::::
-::      This tool was updated on 3/8/17.      ::
-::Read the about section for more information!::
-::::::::::::::::::::::::::::::::::::::::::::::::
-
 @echo off
 set TTL=title Anti-Telemetry Tool -
 
